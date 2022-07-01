@@ -29,7 +29,7 @@ router.put('/update/:id', isRequestValid, isAdmin, async (req, res) => {
 	}
 });
 
-router.delete('/delele/:id', isRequestValid, isAdmin, async (req, res) => {
+router.delete('/delete/:id', isRequestValid, isAdmin, async (req, res) => {
 	try {
 		await productModel.findByIdAndDelete(req.params.id);
 		res.status(200).send({ status: 'Done' });
